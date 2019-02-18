@@ -18,8 +18,8 @@ export class MemberDetailComponent implements OnInit {
 
   ngOnInit() {
     this.route.data.subscribe(data => {
-      this.user = data["user"];
-    })
+      this.user = data['user'];
+    });
 
     this.galleryOptions = [
       {
@@ -30,7 +30,8 @@ export class MemberDetailComponent implements OnInit {
         imageAnimation: NgxGalleryAnimation.Slide,
         preview:false
       }
-    ]
+    ];
+    this.galleryImages = this.getImages();
   }
 
   getImages(){
